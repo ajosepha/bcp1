@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20141205222836) do
   create_table "reviews", force: true do |t|
     t.string   "title"
     t.string   "text"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
