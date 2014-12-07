@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141205222836) do
+ActiveRecord::Schema.define(version: 20141206175614) do
+
+  create_table "pills", force: true do |t|
+    t.string   "name"
+    t.string   "hormone"
+    t.string   "phase"
+    t.boolean  "verified"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "reviews", force: true do |t|
     t.string   "title"
@@ -19,6 +28,7 @@ ActiveRecord::Schema.define(version: 20141205222836) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "pill_id"
   end
 
   create_table "users", force: true do |t|

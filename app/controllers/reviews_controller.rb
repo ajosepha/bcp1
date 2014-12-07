@@ -1,10 +1,16 @@
 class ReviewsController < ApplicationController
 	def new
 		@review = Review.new
+		if current_user
+			@user = current_user.id
+		else
+			@user = "no user signed in"
+		end
 	end
 
 	def create
 		@review = Review.new(review_params)
+	
 		
 		if @review.save
 			redirect_to @review
