@@ -6,7 +6,7 @@ class PillsController < ApplicationController
 		@pills = Pill.all
 	end
 
-	def create
-		
+	def show
+		@pill = Pill.find(params[:id])
 	end
 end
