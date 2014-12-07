@@ -1,7 +1,8 @@
 <%= current_user %>
 
 <h1>All the pills will go here</h1>
-
-<% @pills.each do |pill| %>
-	<%= pill.name %>
-<%end%>
+<ul>
+	<% @pills.each do |pill| %>
+		<li><%= pill.name %></li>
+	<%end%>
+</ul>

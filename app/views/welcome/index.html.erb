@@ -1,10 +1,9 @@
 <h1>What's in your birth control</h1>
-<p> Here is where you can find information about birth control pills and user reivews.  this is NOT a medical site, just something that interests me.</p>
+<p> Here is where you can find information about hormonal birth control methods and user reivews.  this is NOT a medical site, just something that interests me.</p>
 
 <%= link_to "All Pills", pills_path %><br/>
 <% if user_signed_in? %>
 	<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-
 <% else %>
 	<%= link_to "Sign in", new_user_session_path, :method => :get %>
 	<%= link_to "Sign up", new_user_registration_path, :method => :get %>
