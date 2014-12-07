@@ -1,5 +1,9 @@
 <%= @pill.name %><br/>
 <%= @pill.hormone %>
 this pill is the id <%= @pill.id %>
-<h1> Add a review </h1>
-<%= link_to 'New review', new_review_path %>
+<% if current_user %>
+	<div class = "addReview">
+		<h1> Add a review </h1>
+		<%= link_to 'New review', new_review_path(:pill_id => @pill.id)%>
+	</div>
+<%end %>
