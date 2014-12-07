@@ -3,6 +3,6 @@
 <h1>All the pills will go here</h1>
 <ul>
 	<% @pills.each do |pill| %>
-		<li><%= pill.name %></li>
+		<li><%= pill.name %><%= link_to 'Show', pill_path(pill) %></li>
 	<%end%>
 </ul>
