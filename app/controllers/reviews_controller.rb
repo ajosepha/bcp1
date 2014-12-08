@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
 	def new
 		@review = Review.new
-		@id = params[:pill_id]
+		@pill_id = params[:pill_id]
 		if current_user
 			@user = current_user.id
 		else
@@ -12,6 +12,7 @@ class ReviewsController < ApplicationController
 	def create
 		@review = Review.new(review_params)
 		@review.user_id = current_user.id
+		@review.pill_id = @pill_id
 		if @review.save
 			redirect_to @review
 		else
@@ -51,7 +52,7 @@ class ReviewsController < ApplicationController
 
 	private
   	def review_params
-    	params.require(:review).permit(:title,:text)
+    	params.require(:review).permit(:title,:text, :pill_id)
   	end
 
 
