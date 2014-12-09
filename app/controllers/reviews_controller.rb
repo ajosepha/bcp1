@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
 	def new
 		@review = Review.new
+		@pill = Pill.find(params[:pill_id])
 
 		
 		if current_user
@@ -28,6 +29,8 @@ class ReviewsController < ApplicationController
 
 	def index
 		@reviews = Review.all
+		@reviews = Review.where(pill_id: params[:pill_id])
+		
 	end
 
 	def edit

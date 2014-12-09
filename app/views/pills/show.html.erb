@@ -1,8 +1,24 @@
 <%= @pill.name %><br/>
 <%= @pill.hormone %>
-<%@reviews.each  do |review|%>
-	<%= review.text %>
-<%end %>
+
+
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Text</th>
+		<th>User</th>
+		<th> Pill Id </th>
+	</tr>
+	<%@reviews.each  do |review|%>
+		<tr>
+			<td><%= review.title %></td>
+			<td><%= review.text %></td>
+			<td> <%= review.user_id %></td>
+			<td> <%= review.pill_id %></td>
+
+		</tr>
+	<%end %>
+</table>
 <% if current_user %>
 	<div class = "addReview">
 		<h1> Add a review </h1>
