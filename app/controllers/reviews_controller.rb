@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
 	def new
 		@review = Review.new
 		@pill_id = params[:pill_id]
-		@pills = Pill.all
+		
 		if current_user
 			@user = current_user.id
 		else

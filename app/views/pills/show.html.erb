@@ -4,6 +4,6 @@ this pill is the id <%= @pill.id %>
 <% if current_user %>
 	<div class = "addReview">
 		<h1> Add a review </h1>
-		<%= link_to 'New review', new_review_path(:pill_id => @pill.id)%>
+		<%= link_to 'New review', new_pill_review_path(@pill, @review)%>
 	</div>
 <%end %>

@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users 
-  
-  resources :reviews
 
-
-  resources :pills
+  resources :pills do
+  	resources :reviews
+  end
   # get 'welcome/index'
   
 
