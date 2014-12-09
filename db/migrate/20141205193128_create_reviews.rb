@@ -4,6 +4,7 @@ class CreateReviews < ActiveRecord::Migration
       t.string :title
       t.string :text
       t.belongs_to :user
+      t.belongs_to :pill
 
       t.timestamps
     end

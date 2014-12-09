@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
 	def new
 		@review = Review.new
-		@pill_id = params[:pill_id]
+
 		
 		if current_user
 			@user = current_user.id
@@ -11,17 +11,19 @@ class ReviewsController < ApplicationController
 	end
 
 	def create
-		@review = Review.new(review_params.merge(pill_id: :pill_id))
+		@review = Review.new(review_params)
 		@review.user_id = current_user.id
+		@review.pill_id = params[:pill_id]
 		if @review.save
-			redirect_to @review
+			redirect_to pill_review_path
 		else
 			render 'new'
 		end
 	end
 
 	def show
-		@review = Review.find(params[:id])
+		@pill = Pill.find(params[:pill_id])
+		@review = @pill.reviews.find(params[:id])
 	end
 
 	def index
