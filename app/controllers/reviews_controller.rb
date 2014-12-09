@@ -15,7 +15,7 @@ class ReviewsController < ApplicationController
 		@review.user_id = current_user.id
 		@review.pill_id = params[:pill_id]
 		if @review.save
-			redirect_to pill_review_path
+			redirect_to pill_path(params[:pill_id])
 		else
 			render 'new'
 		end
