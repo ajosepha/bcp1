@@ -1,6 +1,8 @@
 <%= @pill.name %><br/>
 <%= @pill.hormone %>
-this pill is the id <%= @pill.id %>
+<%@reviews.each  do |review|%>
+	<%= review.text %>
+<%end %>
 <% if current_user %>
 	<div class = "addReview">
 		<h1> Add a review </h1>

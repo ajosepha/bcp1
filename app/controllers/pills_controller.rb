@@ -8,5 +8,6 @@ class PillsController < ApplicationController
 
 	def show
 		@pill = Pill.find(params[:id])
+		@reviews = Review.where(pill_id: params[:id])
 	end
 end
