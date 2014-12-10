@@ -3,7 +3,7 @@ class PillsController < ApplicationController
 	end
 
 	def index
-		@pills = Pill.all
+		@pills = Pill.all.order(:name)
 	end
 
 	def show
