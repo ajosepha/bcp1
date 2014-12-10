@@ -1,8 +1,9 @@
 <%= current_user %>
 
-<h1>All the pills will go here</h1>
+<h1>All Pills</h1>
 <ul>
 	<% @pills.each do |pill| %>
 		<li><%= link_to pill.name, pill_path(pill) %></li>
 	<%end%>
 </ul>
+

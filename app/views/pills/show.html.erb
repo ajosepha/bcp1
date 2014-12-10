@@ -24,4 +24,12 @@
 		<h1> Add a review </h1>
 		<%= link_to 'New review', new_pill_review_path(@pill, @review)%>
 	</div>
+<%else %>
+	You must sign in or sign up to write a review
+	<%= link_to "Sign in", new_user_session_path, :method => :get %>
+	<%= link_to "Sign up", new_user_registration_path, :method => :get %>
 <%end %>
+
+
+
+<%= link_to "All Pills", pills_path %><br/>
