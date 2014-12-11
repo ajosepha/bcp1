@@ -1443,6 +1443,24 @@ $include-html-global-classes: $include-html-classes;
 @import 'foundation';
 
 
-body{
-	background-color: #f66f89;
+/*body{
+	background-color: #ff7373;
+}*/
+
+.centerElements{
+	text-align: center;
+}
+
+.green {
+	background-color: #b22d74;
+}
+
+.info{
+	padding-top: 20px;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+li {
+	list-style-type: none;
 }
