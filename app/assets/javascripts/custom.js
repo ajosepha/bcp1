@@ -5,12 +5,11 @@ $(document).ready(function(){
 
   $(".pillCard").mouseover(function(){
   	console.log("mouse over");
-  	$(this).css("border", "solid black 2px")
   	$(this).find(".pillHormone").removeClass("hidden")
 
   })
 
   $(".pillCard").mouseleave(function(){
-  	$(this).css("border", "none")
+  	$(this).find(".pillHormone").addClass("hidden")
   })
 });
