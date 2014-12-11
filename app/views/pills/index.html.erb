@@ -1,9 +1,10 @@
 <%= current_user %>
 
 <h1>All Pills</h1>
-<ul>
-	<% @pills.each do |pill| %>
-		<li><%= link_to pill.name, pill_path(pill) %></li>
-	<%end%>
-</ul>
-
+<div class="allPills">
+	<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+		<% @pills.each do |pill| %>
+			<li><%= link_to pill.name, pill_path(pill) %></li>
+		<%end%>
+	</ul>
+</div>
