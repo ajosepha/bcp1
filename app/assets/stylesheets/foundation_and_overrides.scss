@@ -1442,10 +1442,9 @@ $include-html-global-classes: $include-html-classes;
 
 @import 'foundation';
 
-
-/*body{
-	background-color: #ff7373;
-}*/
+body{
+	background-color: white;
+}
 
 .centerElements{
 	text-align: center;
@@ -1473,3 +1472,37 @@ $include-html-global-classes: $include-html-classes;
 .hidden {
 	display: none;
 }
+
+li.pillCard {
+	min-height: 4.75em;
+
+}
+
+.pillCard {
+	text-align: center;
+	background-color: #34d2af;
+	border: 10px solid white;
+}
+
+.pillCard:hover{
+	background-color: #006A55;
+}
+
+.pillName {
+	color: white;
+}
+
+.pillName:hover{
+	color: #f97083;
+}
+.pillHormone{
+	font-size: .8em;
+/*	color: #f26d93;	*/
+	color: white;
+	font-weight: bold;
+}
+
+.button:hover{
+	background-color:#009999;
+}
+

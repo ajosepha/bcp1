@@ -1,17 +1,19 @@
-<div class = "centerElements info">
-	<h1>What's in your birth control</h1>
-	<p> Here is where you can find information about hormonal birth control methods and user reivews.  This is NOT a medical site, just something that interests me. Go to all pills to find out which pills have which hormones, and sign in to write reviews</p>
-</div>
+<div class="introPage">
+	<div class = "centerElements info">
+		<h1>What's in your birth control</h1>
+		<p> Here is where you can find information about hormonal birth control methods and user reivews.  This is NOT a medical site, just something that interests me. Go to all pills to find out which pills have which hormones, and sign in to write reviews</p>
+	</div>
 
-<div class="centerElements">
-	<%= link_to "All Pills", pills_path, :class=> "button green" %>
-		<br/>
-	<% if user_signed_in? %>
-	<%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class=> "button green"%>
-	<% else %>
-		<%= link_to "Sign in", new_user_session_path, :method => :get, :class=> "button green" %>
-		<%= link_to "Sign up", new_user_registration_path, :method => :get, :class=> "button green" %>
-	<%end %>
+	<div class="centerElements">
+		<%= link_to "All Pills", pills_path, :class=> "button green" %>
+			<br/>
+		<% if user_signed_in? %>
+		<%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class=> "button green"%>
+		<% else %>
+			<%= link_to "Sign in", new_user_session_path, :method => :get, :class=> "button green" %>
+			<%= link_to "Sign up", new_user_registration_path, :method => :get, :class=> "button green" %>
+		<%end %>
+	</div>
 </div>
 
 
