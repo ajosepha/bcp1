@@ -1,29 +1,57 @@
-<h2>Sign up for this why don't you show up!</h2>
+<div class="row">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <h2>Sign up to write reviews!</h2>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @validatable %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+    
+    <div class="row">
+      <div class="small-8">
+        <div class="row">
+          <div class="small-3 columns">
+            <%= f.label :email, :class=> "right inline" %><br />
+          </div>
+          <div class="small-9 columns">
+            <%= f.email_field :email, autofocus: true, :id => "right-label" %>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+    <div class="row">
+      <div class="small-8">
+        <div class="row">
+          <div class="small-3 columns">
+            <%= f.label :password, :class => "right inline" %>          
+          </div>
+          <div class="small-9 columns">
+            <% if @validatable %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em><br/>
+            <% end %>
+            <%= f.password_field :password, autocomplete: "off", :id => "right-label"%>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+    <div class="row">
+      <div class="small-8">
+        <div class="row">
+          <div class="small-3 columns">
+            <%= f.label :password_confirmation, :class=> "right inline" %>
+          </div>
+          <div class="small-9 columns">
+            <%= f.password_field :password_confirmation, autocomplete: "off", :id =>"right-label" %>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<%= render "users/shared/links" %>
+    <div>
+      <%= f.submit "Sign up", :class=>"button green" %>
+    </div>
+  <% end %>
+
+  <%= render "users/shared/links" %>
+</div>
