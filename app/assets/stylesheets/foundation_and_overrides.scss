@@ -1443,7 +1443,6 @@ $include-html-global-classes: $include-html-classes;
 @import 'foundation';
 
 
-
 .centerElements{
 	text-align: center;
 }
@@ -1508,4 +1507,14 @@ body.welcome.index{
 	background-image: url("birth-control-pills.jpg"); 
 	background-repeat: no-repeat;
 	background-size: 100% 100%
+}
+
+.introPage {
+	margin: 0em 4em;
+	background: rgba(0, 0, 0, .5);
+	color: white;
+}
+
+.introPage h1 {
+	color: white;
 }
