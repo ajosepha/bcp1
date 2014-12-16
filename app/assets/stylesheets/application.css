@@ -24,4 +24,80 @@
  	background-color: red 
  }*/
 
+.centerElements{
+	text-align: center;
+}
+
+.green {
+	background-color: #b22d74;
+}
+
+.info{
+	padding-top: 20px;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+.allPills{
+	margin-right: 40px;
+	margin-left: 40px;
+}
+
+.pill {
+	color: #9a001e;
+}
+
+.hidden {
+	display: none;
+}
+
+li.pillCard {
+	min-height: 4.75em;
+
+}
+
+.pillCard {
+	text-align: center;
+	background-color: #34d2af;
+	border: 10px solid white;
+}
+
+.pillCard:hover{
+	background-color: #006A55;
+}
+
+.pillName {
+	color: white;
+}
+
+.pillName:hover{
+	color: #f97083;
+}
+.pillHormone{
+	font-size: .8em;
+/*	color: #f26d93;	*/
+	color: white;
+	font-weight: bold;
+}
+
+.button:hover{
+	background-color:#009999;
+}
+
+body.welcome.index{
+	background-image: url("birth-control-pills.jpg"); 
+	background-repeat: no-repeat;
+	background-size: 100% 100%
+}
+
+.introPage {
+	margin: 0em 4em;
+	background: rgba(0, 0, 0, .5);
+	color: white;
+}
+
+.introPage h1 {
+	color: white;
+}
+
 
