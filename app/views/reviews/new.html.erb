@@ -1,7 +1,14 @@
-<h1>New reviews go here</h1>
-<%= @pill %><br/>
-<%= @my_reviews %>
+<div class="row">
+	<div class="row">
+		<div class="row">
+		  	<div class="centerElements">
+		  		<h1 class="headline">New Review for <%=@pill.name %></h1>
+		  	</div>
+		</div>
+	</div>
 
-<%= render 'form' %>
 
-<%= link_to 'Back', pill_reviews_path %>
+	<%= render 'form' %>
+
+	<%= link_to 'Back', pill_reviews_path, :class => "button green" %>
+</div>

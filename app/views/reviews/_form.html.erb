@@ -11,19 +11,34 @@
     </ul>
   </div>
   <% end %>
-  this pill id in the form is <%= @pill_id %>
- <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
 
+<div class="row">
+  <div class="small-8">
+    <div class="row">
+      <div class="small-3 columns">
+        <%= f.label :title, :class => "right inline" %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_field :title, :id => "right-label" %>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<div class="row">
+  <div class="small-8">
+    <div class="row">
+      <div class="small-3 columns">
+        <%= f.label :text, :class=>"right inline" %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_area :text, :id => "right-label"%>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
+<div>
+<%= f.submit "Save Review", :class=>"button green"%>
+</div>
 <% end %>
