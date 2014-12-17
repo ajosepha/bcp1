@@ -1,41 +1,40 @@
 <div class="row">
-  	<div class="centerElements">
-  		<%= @pill.name %>
-  	</div>
+	<div class="row">
+	  	<div class="centerElements">
+	  		<h1 class="headline"><%= @pill.name %></h1>
+	  	</div>
 
-	<div class="centerElements">
-  		<%= @pill.hormone %>
+		<div class="centerElements">
+	  		<%= @pill.hormone %>
+		</div>
 	</div>
-</div>
 
 
-<% if @reviews.length > 0%>
-	<table>
-		<tr>
-			<th>Title</th>
-			<th>Text</th>
-			<th>User</th>
-			<th> Pill Id </th>
-		</tr>
-		<%@reviews.each  do |review|%>
+	<% if @reviews.length > 0%>
+		<table>
 			<tr>
-				<td><%= review.title %></td>
-				<td><%= review.text %></td>
-				<td> <%= review.user_id %></td>
-				<td> <%= review.pill_id %></td>
-
+				<th>Title</th>
+				<th>Text</th>
+				<th>User</th>
+				<th> Pill Id </th>
 			</tr>
-		<%end %>
-	</table>
-<%end %>
+			<%@reviews.each  do |review|%>
+				<tr>
+					<td><%= review.title %></td>
+					<td><%= review.text %></td>
+					<td> <%= review.user_id %></td>
+					<td> <%= review.pill_id %></td>
 
+				</tr>
+			<%end %>
+		</table>
+	<%end %>
 
-<%= link_to 'Add a new review', new_pill_review_path(@pill, @review)%>
-<!-- 
-<% if !current_user %>
-	You must sign in or sign up to write a review
-	<%= link_to "Sign in", new_user_session_path, :method => :get %>
-	<%= link_to "Sign up", new_user_registration_path, :method => :get %>
-<%else %>
-	
-<%end %> -->
+	<% if current_user %>
+		<%= link_to 'Add a new review', new_pill_review_path(@pill, @review), :class => "button green" %>
+	<%else %>
+		You must sign in or sign up to write a review
+		<%= link_to "Sign in", new_user_session_path, :method => :get %>
+		<%= link_to "Sign up", new_user_registration_path, :method => :get %>
+	<%end %>
+</div>
