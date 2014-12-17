@@ -5,12 +5,19 @@
 
 <%= search_form_for @q do |f|%>
 
-	<%= f.label :name_cont, "Pill Name" %>
-  	<%= f.search_field :name_cont %>
-
-  	<%= f.label :hormone_cont, "Hormone Name" %>
-  	<%= f.search_field :hormone_cont %>
-<div class="actions"><%= f.submit "Search", :class => "button green" %></div>
+	<div class="row">
+		<div class="large-4 columns">
+			<%= f.label :name_cont, "Pill Name" %>
+			<%= f.search_field :name_cont %>
+		</div>
+		<div class="large-4 columns">
+			<%= f.label :hormone_cont, "Hormone Name" %>
+			<%= f.search_field :hormone_cont %>
+		</div>
+		<div class="large-4 columns" style="padding-top: 0.7em">
+			<%= f.submit "Search", :class => "button green" %>
+		</div>
+	</div>
 <%end %>
 
 
