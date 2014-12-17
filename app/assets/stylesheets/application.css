@@ -89,6 +89,12 @@ body.welcome.index{
 	background-repeat: no-repeat;
 	background-size: 100% 100%
 }
+/*
+body.pills.show{
+	background-image: url("birth-control-pills.jpg"); 
+	background-repeat: no-repeat;
+	background-size: 100% 100%
+}*/
 
 .introPage {
 	margin: 0em 4em;
