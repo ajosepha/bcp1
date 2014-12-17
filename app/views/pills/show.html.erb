@@ -1,35 +1,40 @@
-<%= @pill.name %><br/>
-<%= @pill.hormone %>
+<div class="row">
+  	<div class="centerElements">
+  		<%= @pill.name %>
+  	</div>
 
-
-<table>
-	<tr>
-		<th>Title</th>
-		<th>Text</th>
-		<th>User</th>
-		<th> Pill Id </th>
-	</tr>
-	<%@reviews.each  do |review|%>
-		<tr>
-			<td><%= review.title %></td>
-			<td><%= review.text %></td>
-			<td> <%= review.user_id %></td>
-			<td> <%= review.pill_id %></td>
-
-		</tr>
-	<%end %>
-</table>
-<% if current_user %>
-	<div class = "addReview">
-		<h1> Add a review </h1>
-		<%= link_to 'New review', new_pill_review_path(@pill, @review)%>
+	<div class="centerElements">
+  		<%= @pill.hormone %>
 	</div>
-<%else %>
-	You must sign in or sign up to write a review
-	<%= link_to "Sign in", new_user_session_path, :method => :get %>
-	<%= link_to "Sign up", new_user_registration_path, :method => :get %>
+</div>
+
+
+<% if @reviews.length > 0%>
+	</table><table>
+		<tr>
+			<th>Title</th>
+			<th>Text</th>
+			<th>User</th>
+			<th> Pill Id </th>
+		</tr>
+		<%@reviews.each  do |review|%>
+			<tr>
+				<td><%= review.title %></td>
+				<td><%= review.text %></td>
+				<td> <%= review.user_id %></td>
+				<td> <%= review.pill_id %></td>
+
+			</tr>
+		<%end %>
 <%end %>
 
 
 
-<%= link_to "All Pills", pills_path %><br/>
+<!-- 
+<% if !current_user %>
+	You must sign in or sign up to write a review
+	<%= link_to "Sign in", new_user_session_path, :method => :get %>
+	<%= link_to "Sign up", new_user_registration_path, :method => :get %>
+<%else %>
+	<%= link_to 'Add a new review', new_pill_review_path(@pill, @review)%>
+<%end %> -->
