@@ -110,4 +110,22 @@ body.pills.show{
 	color: white;
 }
 
+.reviews {
+	margin-top: 2em;
+
+}
+
+.reviews .tableHeadline {
+	background-color: #009999;
+}
+
+.reviews .tableHeadline th {
+	color: white;
+/*	border: 1px solid #f97083;*/
+}
+
+.reviews td {
+	border: 1px solid #f97083;
+}
+
 
