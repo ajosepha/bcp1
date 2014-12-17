@@ -3,7 +3,10 @@ class PillsController < ApplicationController
 	end
 
 	def index
-		@pills = Pill.all.order(:name)
+		@q = Pill.search(params[:q])
+		@pills = @q.result
+		# @search = Pill.search(params[:q])
+		# @pills = @search.result
 	end
 
 	def show

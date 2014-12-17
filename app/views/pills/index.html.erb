@@ -1,6 +1,17 @@
+
+<%= search_form_for @q do |f|%>
+
+	<%= f.label :name_cont %>
+  	<%= f.search_field :name_cont %>
+
+<div class="actions"><%= f.submit "search" %></div>
+<%end %>
+
 <div class="centerElements">
 	<h1>All Pills</h1>
 </div>
+
+
 <div class="allPills">
 	<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
 		<% @pills.each do |pill| %>
