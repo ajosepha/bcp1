@@ -8,7 +8,7 @@ gem 'rails', '4.1.8'
 gem 'pg'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+# gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -38,7 +38,10 @@ gem 'modernizr-rails'
 
 gem 'ransack'
 
+gem 'sass-rails', '~> 4.0.2'
+
 gem 'rails_12factor', group: :production
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
