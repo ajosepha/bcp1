@@ -32,7 +32,7 @@ gem 'devise'
 
 gem 'nokogiri'
 
-gem 'foundation-rails'
+gem 'foundation-rails', '5.4.3.1'
 
 gem 'modernizr-rails'
 
